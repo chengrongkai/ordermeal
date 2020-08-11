@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://124.71.113.247:3306/pb_cms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  redis:
+    host: 124.71.113.247
+    port: 6379
+    password:
+    timeout: 5000
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-active: 8
+        max-wait: -1
+server:
+  servlet:
+    context-path: /
+
+
+
+file:
+  #上传的文件对外暴露的访问路径
+  access-path-pattern: /u/**
+  #文件上传目录
+  upload-folder: /upload/
+  #文件预览、下载的绝对路径
+  access-prefix-url: https://www.bizhibihui.com/u
